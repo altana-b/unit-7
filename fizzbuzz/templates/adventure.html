@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <style>
+        body {
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        h1 {
+            font-size: 48px;
+        }
+
+        p, a {
+            font-size: 24px;
+        }
+
+        a {
+            color: red;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 100px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>{{ title }}</h1>
+        {% if number>0%}
+
+        <ul>
+            {%for item in list1%}
+    
+            <li>{{item}}</li>
+
+            {%endfor%}
+        </ul>
+        {%else%}
+        <p>Please enter a number greater than 0</p>
+        {%endif%}
+    </div>
+</body>
+
+</html>
