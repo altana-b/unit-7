@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <style>
+        body {
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        h1 {
+            font-size: 48px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 100px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>{{ title }}</h1>
+        {% if list1 !=[] %}
+        {#<!--{% if list1 | count !=0 %}!-->#}
+
+        <ul>
+            {%for item in list1%}
+    
+            <li>{{item}}</li>
+
+            {%endfor%}
+        </ul>
+        {%else%}
+        <p>There are no anagrams of this word</p>
+        {%endif%}
+    </div>
+</body>
+
+</html>
